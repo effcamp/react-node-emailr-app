@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import StripeCheckout from 'react-stripe-checkout';
 import { connect } from 'react-redux';
+import { Button } from 'react-bootstrap';
 import * as actions from '../actions';
 
 export class Payments extends Component {
@@ -13,7 +14,9 @@ export class Payments extends Component {
         token={token => this.props.handleToken(token)}
         stripeKey={process.env.REACT_APP_STRIPE_KEY}
       >
-        <button className="btn">Add Credits</button>
+        <Button bsSize="small" bsStyle="danger">
+          Add Credits
+        </Button>
       </StripeCheckout>
     );
   }

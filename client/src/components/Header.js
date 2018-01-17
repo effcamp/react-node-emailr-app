@@ -38,7 +38,7 @@ export class Header extends Component {
             className="left brand-logo"
           >
             {' '}
-            Emaily{' '}
+            Emailr{' '}
           </Link>
 
           <ul className="right">{this.renderContent()}</ul>

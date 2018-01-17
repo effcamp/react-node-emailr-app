@@ -8,7 +8,7 @@ class Mailer extends helper.Mail {
 
     this.sgApi = sendGrid(keys.sendGridKey);
 
-    this.from_email = new helper.Email('no-reply@emaily.com');
+    this.from_email = new helper.Email('no-reply@emailr.com');
     this.subject = subject;
     this.body = new helper.Content('text/html', content);
     this.recipients = this.formatAddresses(recipients);
@@ -34,7 +34,7 @@ class Mailer extends helper.Mail {
 
   addRecipients() {
     const personalize = new helper.Personalization();
-    this.recipients.forEach(recipient => {
+    this.recipients.forEach((recipient) => {
       personalize.addTo(recipient);
     });
     this.addPersonalization(personalize);
